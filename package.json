@@ -1,8 +1,8 @@
 {
-  "name": "url-router-traning",
-  "description": "url-router-traning",
+  "name": "gulp-requirejs-angular-bootstrap",
+  "description": "jxbapp.com",
   "version": "0.0.1",
-  "author": "vurtne",
+  "author": "jxbapp.com",
   "private": true,
   "dependencies": {
     "async": "1.5.0",

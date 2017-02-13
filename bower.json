@@ -1,6 +1,6 @@
 {
-  "name": "saas-operation",
-  "description": "jiaxiaobang",
+  "name": "gulp-requirejs-angular-bootstrap",
+  "description": "jxbapp.com",
   "main": "app.js",
   "authors": [
     "jxbapp.com"

@@ -20,12 +20,7 @@ require.config({
     }
 });
 
-require([
-    'jquery',
-    'app',
-    'common/browserdetect',
-    'common/prototype'
-], function ($, app) {
+require(['jquery', 'app', 'common/browserdetect', 'common/prototype'], function ($, app) {
 
     var $ = require('jquery');
 

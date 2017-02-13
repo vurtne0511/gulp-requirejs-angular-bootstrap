@@ -1,6 +1,6 @@
 {
   "port": "3050",
-  "name": "angular application",
+  "name": "gulp-requirejs-angular-bootstrap",
   "base": "/",
   "gulp": {
     "path": { 
