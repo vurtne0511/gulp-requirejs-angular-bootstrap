@@ -1,0 +1,20 @@
+<div class="content">
+    <div class="content-header">
+        <span class="title">学生详情</span>
+        <div class="action-bar">
+            <button class="btn btn-default btn-xs" ui-sref="edu-student"><span class="icon-return"></span>&nbsp;返回列表</button>
+        </div>
+    </div>
+    <div class="content-body">
+       <ul class="nav nav-tabs nav-tabs-primary" role="tablist">
+            <li role="tab" ng-repeat="item in tabs" ng-class="{'active':isCurrentState(item.name)}">
+                <a ui-sref="{{item.name}}" ng-bind="item.text"></a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" ui-view="tab-panel">
+
+            </div>
+        </div>
+    </div>
+</div>

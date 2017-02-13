@@ -1,0 +1,115 @@
+/*
+ * Component: Progress Bar
+ * -----------------------
+ */
+
+//General CSS
+.progress {
+    background-color: @progress-bg;
+}
+
+.progress, .progress > .progress-bar {
+    .box-shadow(none);
+    height: 100%;
+    &, .progress-bar {
+        border-radius: @progress-bar-border-radius
+    }
+}
+
+
+/* size variation */
+
+.progress.sm, .progress-sm {
+    height: 10px;
+    &, .progress-bar {
+        border-radius: @progress-bar-sm-border-radius;
+    }
+}
+
+.progress.xs, .progress-xs {
+    height: 7px;
+    &, .progress-bar {
+        border-radius: @progress-bar-xs-border-radius;
+    }
+}
+
+.progress.xxs, .progress-2xs {
+    height: 3px;
+    &, .progress-bar {
+        border-radius: @progress-bar-xs-border-radius;
+    }
+}
+
+
+/* Vertical bars */
+
+.progress.vertical {
+    position: relative;
+    width: 30px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 10px;
+    > .progress-bar {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    //Sizes
+    &.sm, &.progress-sm {
+        width: 20px;
+    }
+    &.xs, &.progress-xs {
+        width: 10px;
+    }
+    &.xxs, &.progress-2xs {
+        width: 3px;
+    }
+}
+
+//Progress Groups
+.progress-group {
+    .progress-text {
+        font-weight: normal;
+    }
+    .progress-number {
+        float: right;
+        color: @gray-light;
+    }
+    .progress {
+        margin-top: 5px;
+    }
+    &.progress-group-inline {
+        display: inline;
+    }
+}
+
+
+/* Remove margins from progress bars when put in a table */
+
+table {
+    tr > td .progress {
+        margin: 0;
+    }
+}
+
+// Variations
+// -------------------------
+.progress-bar-primary {
+    .progress-bar-variant(@brand-primary);
+}
+
+.progress-bar-success {
+    .progress-bar-variant(@brand-success);
+}
+
+.progress-bar-info {
+    .progress-bar-variant(@brand-info);
+}
+
+.progress-bar-warning {
+    .progress-bar-variant(@brand-warning);
+}
+
+.progress-bar-danger {
+    .progress-bar-variant(@brand-danger);
+}

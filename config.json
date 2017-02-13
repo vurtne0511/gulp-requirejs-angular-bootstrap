@@ -1,0 +1,14 @@
+{
+  "port": "3050",
+  "name": "angular application",
+  "base": "/",
+  "gulp": {
+    "path": { 
+      "src": "src", 
+      "dist": "dist"
+    },
+    "browserSync": {
+      "port": 5050
+    }
+  }
+}

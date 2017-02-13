@@ -1,0 +1,33 @@
+@import "./framework/bootstrap.less";
+@import "./framework/variables.less";
+@import "./framework/mixins.less";
+@font-size-base: 13px;
+body {
+    background-color: @base-block-color;
+}
+
+.login-box {
+    padding-top: 50px;
+    width: 300px;
+    margin: 0 auto;
+    .logo {
+        text-align: center;
+        img {
+            padding: 20px;
+            width: 200px;
+        }
+    }
+    .brand p {
+        color: @gray-light;
+        margin-bottom: 20px;
+    }
+    #captcha {
+        border: 1px solid @base-border-color;
+        width: 100%;
+        height: 32px;
+    }
+}
+
+.alert {
+    font-size: 12px;
+}

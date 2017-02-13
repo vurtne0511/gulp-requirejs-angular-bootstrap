@@ -1,0 +1,297 @@
+//.glyphicon {
+//    top: 2px !important;
+//}
+
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.flex-row() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flow: row;
+    -moz-box-flow: row;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+
+/* 设置flex比重, 默认值:1 */
+
+.flex(@flex: 1) {
+    display: block;
+    -webkit-box-flex: @flex;
+    -moz-box-flex: @flex;
+    -webkit-flex: @flex;
+    box-flex: @flex;
+    flex: @flex;
+}
+
+//border radius creator
+.border-radius(@radius) {
+    border-radius: @radius;
+}
+//Different radius each side
+.border-radius(@topLeft, @topRight, @bottomLeft, @bottomRight) {
+    border-top-left-radius: @topLeft;
+    border-top-right-radius: @topRight;
+    border-bottom-left-radius: @bottomLeft;
+    border-bottom-right-radius: @bottomRight;
+}
+
+// content
+.content-variant(@color , @border-color) {
+    .content-header {
+        border-bottom-color: @border-color;
+        .title::before {
+            background-color: @color;
+        }
+    }
+}
+
+// 定义 .btn-checked-* 的通用代码
+.btn-checked-variant(@color, @bg-color, @border-color, @active-color, @active-bg, @active-border) {
+    // .button-variant(@color, @bg-color, @border-color);
+    // &:hover {
+    //     background-color: darken(@bg-color, 8%);
+    //     border-color: darken(@border-color, 12%);
+    // }
+    // &:focus, &.focus {
+    //     background-color: darken(@bg-color, 5%);
+    //     border-color: darken(@border-color, 10%);
+    //     &:hover {
+    //         background-color: darken(@bg-color, 8%);
+    //         border-color: darken(@border-color, 12%);
+    //     }
+    // }
+    &.active, &:active {
+        color: @active-color;
+        background-color: @active-bg;
+        border-color: @active-border;
+        .box-shadow(none);
+        // &:hover {
+        //     color: @active-color;
+        //     background-color: darken(@active-bg, 10%);
+        //     border-color: darken(@active-border, 12%);
+        // }
+        // &:focus, &.focus {
+        //     color: @active-color;
+        //     background-color: @active-bg;
+        //     border-color: @active-border;
+        //     &:hover {
+        //         color: @active-color;
+        //         background-color: darken(@active-bg, 10%);
+        //         border-color: darken(@active-border, 12%);
+        //     }
+        // }
+    }
+}
+
+
+// checkbox & radio
+.checkbox-variant(@parent, @color) {
+    .@{parent} input[type="checkbox"]:checked + label,
+    .@{parent} input[type="radio"]:checked + label {
+        &::before {
+            background-color: @color;
+            border-color: @color;
+        }
+        &::after {
+            color: #fff;
+        }
+    }
+}
+
+.checkbox-variant-indeterminate(@parent, @color) {
+    .@{parent} input[type="checkbox"]:indeterminate + label,
+    .@{parent} input[type="radio"]:indeterminate + label {
+        &::before {
+            background-color: @color;
+            border-color: @color;
+        }
+        &::after {
+            background-color: #fff;
+        }
+    }
+}
+
+.radio-variant(@parent, @color) {
+    .@{parent} input[type="radio"] {
+        & + label {
+            &::after { background-color: @color; }
+        }
+        &:checked + label{
+            &::before { border-color: @color; }
+            &::after { background-color: @color; }
+        }
+    }
+}
+
+// 表单相关
+.form-control-variant(@name,@width) {
+    .form-control-@{name} {
+        width: @width;
+    }
+    select.form-control-@{name} {
+        width: @width;
+    }
+    textarea.form-control-@{name} {
+        width: ceil(@width * 2);
+    }
+}
+
+// photo
+.photo-variant (@size, @font-size, @gutter-width, @border-radius) {
+    .photo-list-item {
+        width: @size;
+        height: @size;
+        margin-right: @gutter-width;
+        margin-bottom: @gutter-width;
+        border-radius: @border-radius;
+        &.action-add span {
+            width: @size;
+            height: @size;
+            font-size: @font-size * 2.6;
+            line-height: @size - 2;
+        }
+        .photo-action {
+            font-size: @font-size;
+            height: ceil(@size * 0.3);
+            width: @size - 2;
+            border-bottom-right-radius: @border-radius - 1;
+            border-bottom-left-radius: @border-radius - 1;
+            .photo-action-btn {
+                line-height: ceil(@size * 0.3);
+            }
+        }
+    }
+}
+
+.photo-validate-variant (@border-color) {
+    border-color: @border-color;
+    @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten(@border-color, 20%);
+    .box-shadow(@shadow);
+    .action-add {
+        color: darken(@border-color, 10%);
+    }
+}
+
+// text
+.text-color-variant (@color) {
+    color: darken(@color, 5%);
+}
+
+// nav
+.navbar-header-variant(@color, @font-color: #fff) {
+    background-color: @color;
+    color: @font-color;
+    .logo {
+        background-color: darken(@color, 5%);
+        color: @font-color;
+    }
+    .header-navbar > li{
+        color : @font-color;
+        border-color: darken(@color, 5%);
+        &.open > a ,
+        &.active > a ,
+        &:hover > a  { 
+            background-color: darken(@color, 2%);
+        }
+    }
+}
+
+/**
+ * @color : 
+ */
+.nav-sidebar-variant(@color, @bg-color, @font-color, @font-color-active) {
+    background-color: @bg-color;
+    .sidebar-switch {
+        color: @font-color;
+        background-color: lighten(@bg-color , 10%);
+    }
+    .group-title, ul > li {
+        color: @font-color;
+        &:hover {
+            background-color: lighten(@bg-color , 10%);
+            color: @font-color-active;
+        }   
+        &.active {
+            background-color: @color;
+            color: @font-color-active;
+        }
+        .group-title {
+            background-color: @bg-color;
+        }
+    }
+}
+
+.nav-navbar-variant (@active-color) {
+    & > li {
+        &:hover > b {
+            background-color: lighten(@active-color, 10%);
+        }
+        &.active > b {
+            background-color: @active-color;
+        }
+    }
+}
+
+.nav-tabs-variant(@bg-color, @bg-color-active, @color, @font-color-active, @border-color) {
+    border-color : @border-color;
+    > a {
+        background-color: @bg-color;
+        border-color: @border-color;
+        border-top-color: @bg-color;
+        color: darken(@color , 5%);
+        &:hover {
+            background-color: @bg-color-active;
+            border-top-color: @bg-color-active;
+        }
+    }
+    &.active {
+        border-top-width: 0px;
+        border-bottom-color: @bg-color-active;
+    }
+    &.active > a ,
+    &.active > a:hover {
+        /*border-left-color: @border-color;*/
+        border-top-color: @color;
+        background-color: @bg-color-active;
+        color: @font-color-active;
+    }
+    /*&:first-child > a {
+        border-left-color: @border-color;
+    }*/
+}
+
+
+// pagination 
+
+.pagination-variant ( @active-bg) {
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            background-color: @active-bg;
+            border-color: @active-bg;
+        }
+    }
+}

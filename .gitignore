@@ -45,6 +45,7 @@ pid
 npm-debug.log
 
 # 编译输出目录
+/bower_components/
 /dist/
 /src/libs/*
 /src/css/

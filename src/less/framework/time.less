@@ -1,0 +1,66 @@
+.time-picker {
+	//日期选着样式
+	.form-control {
+		border-radius: 0;
+		&+.input-group-addon {
+			background-color: #F3F5FA;
+		}
+		&.text-left {
+			text-align: left;
+			& + .input-group-addon {
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+	}
+	.input-group-addon {
+		border-radius: 0;
+		&.text-left {
+			text-align: left;
+			& + .input-group-addon {
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+	}
+	&.input-daterange {
+		input {
+			&:first-child, &:last-child {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+.time-select {
+	//课程时长样式
+	.form-control {
+		border-radius: 0;
+		border-right: 0;
+		appearance: none;
+		-moz-appearance: none;
+		/* Firefox */
+		-webkit-appearance: none;
+		/* Safari 和 Chrome */
+		select::-ms-expand {
+			display: none;
+		}
+		/* ie10 */
+	}
+	.input-group-addon {
+		background-color: transparent;
+		border-left: 0;
+	}
+}
+
+.time-input {
+	//休息时间样式
+	.form-control {
+		border-radius: 0;
+		border-right: 0;
+	}
+	.input-group-addon {
+		background-color: transparent;
+		border-left: 0;
+	}
+}

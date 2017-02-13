@@ -1,0 +1,25 @@
+@import "../../libs/bootstrap/less/variables.less";
+@import "../framework/variables.less";
+
+
+@brand-primary:                 #54B4E7; 
+@brand-danger:                  #e12b31; 
+@brand-success:                 #88c149;
+@brand-warning:                 #ff6707;
+@brand-info:                    #04519b;
+
+@header-navbar-bg:              @brand-primary;
+@header-navbar-text-color:      #fff;
+
+@pagination-active-bg:          @brand-primary;
+@pagination-active-border:      @brand-primary;
+
+
+@import "theme.less";
+
+.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.btn-primary { .btn-styles(@btn-primary-bg); }
+.btn-success { .btn-styles(@btn-success-bg); }
+.btn-info    { .btn-styles(@btn-info-bg); }
+.btn-warning { .btn-styles(@btn-warning-bg); }
+.btn-danger  { .btn-styles(@btn-danger-bg); }

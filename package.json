@@ -1,0 +1,39 @@
+{
+  "name": "url-router-traning",
+  "description": "url-router-traning",
+  "version": "0.0.1",
+  "author": "vurtne",
+  "private": true,
+  "dependencies": {
+    "async": "1.5.0",
+    "body-parser": "1.14.1",
+    "compression": "1.6.0",
+    "cookie-parser": "1.4.0",
+    "ejs": "2.3.4",
+    "express": "4.13.3",
+    "express-markdown": "0.0.6",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
+    "event-stream": "^3.3.4",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-footer": "^1.0.5",
+    "gulp-header": "^1.8.8",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "lodash.assign": "^4.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

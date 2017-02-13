@@ -1,0 +1,149 @@
+.poptrox-overlay {
+  .nav-previous {
+    div {
+      position: fixed !important;
+    }
+  }
+  .nav-next {
+    div {
+      position: fixed !important;
+    }
+  }
+}
+
+.photo ul.photo-list {
+  overflow: hidden;
+  
+}
+
+.photo-list-item {
+  float: left;
+  // display: inline-block;
+  list-style: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid @photo-border-color;
+  .photo-action {
+    background: black;
+    opacity: .7;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    .photo-action-btn {
+      border-right: 1px solid #fff;
+      .flex(1);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &.no-border {
+        border-right: none;
+      }
+      a {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+      }
+
+      
+    }
+    .action-upload {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+    }
+
+  }
+
+  .photo-progress {
+    position: relative;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    .progress {
+      position: relative;
+      margin: 0px 10px;
+      top: 50%;
+    }
+  }
+  &.action-add { 
+      text-align: center;
+      color: darken(@photo-border-color, 10%);
+  }
+
+  .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+  &:not(.uploading):hover {
+      border-color : @input-border-focus;
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@input-border-focus, 20%);
+      .box-shadow(@shadow);
+
+      &.action-add {
+        color: darken(@input-border-focus, 10%);
+        .transition(~"color ease-in-out .15s");
+      }
+
+      .photo-action {
+        display: -webkit-box;
+      }
+  }
+
+  &.uploading {
+    .photo-progress {
+      display: block;
+    }
+  }
+}
+
+// 默认尺寸定义
+.photo-variant(@photo-size, @photo-font-size, @photo-gutter-width, @photo-border-radius);
+
+// 小号尺寸定义
+.photo-sm {
+  .photo-variant(@photo-size-sm,@photo-font-size-sm, @photo-gutter-width-sm, @photo-border-radius-sm);
+}
+
+// 大号尺寸定义
+.photo-lg {
+  .photo-variant(@photo-size-lg,@photo-font-size-lg, @photo-gutter-width-lg, @photo-border-radius-lg);
+}
+
+
+.has-success {
+  .photo-list-item {
+    .photo-validate-variant(@state-success-text);
+  }
+}
+
+.has-warning {
+  .photo-list-item {
+    .photo-validate-variant(@state-warning-text);
+  }
+}
+
+.has-error {
+  .photo-list-item {
+    .photo-validate-variant(@state-danger-text);
+  }
+}

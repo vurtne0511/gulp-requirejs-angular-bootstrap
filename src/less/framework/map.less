@@ -1,0 +1,288 @@
+
+.jxb-map {
+  .keyword{
+    input{
+      width: 100%;
+      padding-right: 30px;
+    }
+    span{
+      position: absolute;
+      right: 20px;
+      top: 8px;
+      cursor: pointer;
+      &:hover{
+        color: #007FFF;
+      }
+    }
+  }
+  .map-container {
+    margin: 15px 0 0 0;
+    height: 512px;
+    border: 1px solid #ccc;
+    position: relative;
+    #scalebox {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0 2px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.3);
+      background-color:#fff;
+      .zoom_map {
+        line-height: 24px;
+        text-align: center;
+        font-size: 24px;
+        width: 24px;
+        height: 30px;
+        margin: 0 auto;
+        color: #000;
+        cursor:pointer;
+        &:hover{
+          color: #007FFF;
+        }
+      }
+    }
+  }
+
+  .map-city {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    .cities {
+      background: #FFF;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      .city-header {
+        position: relative;
+        line-height: 36px;
+        border-bottom: 1px solid #cbcccd;
+        .city-current {
+          display: inline-block;
+        }
+        .city-panel-close {
+          position: absolute;
+          right: 0;
+          cursor: pointer;
+        }
+
+      }
+      .city-list {
+        display: block;
+        & > div {
+          display: block;
+        }
+        .city-province {
+          position: relative;
+          width: auto;
+          overflow-y: auto;
+          height: 250px;
+          margin: 10px 0;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          dl {
+            overflow: hidden;
+            width: auto;
+            margin: 4px 0;
+            position: relative;
+            dt {
+              float: left;
+              font-weight: 700;
+              line-height: 20px;
+              display: block;
+            }
+            dd {
+              white-space: normal;
+              line-height: 20px;
+              margin-bottom: 8px;
+              -webkit-margin-start: 40px;
+              li {
+                display: inline-block;
+                margin-right: 9px;
+                cursor: pointer;
+                color: #999;
+                &:hover {
+                  color: #007FFF;
+                }
+              }
+            }
+          }
+        }
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .city-province-letter {
+          padding: 10px 0;
+          white-space: normal;
+          li {
+            display: inline-block;
+            background-color: #F5F5F5;
+            margin-right: 6px;
+            cursor: pointer;
+            line-height: 18px;
+            width: 18px;
+            text-align: center;
+            &:hover {
+              color: #007FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .map-place {
+
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    bottom: 20px;
+    width: 250px;
+    z-index: 1000;
+
+    .place-list {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #565656;
+      word-wrap: break-word;
+      overflow: hidden;
+      overflow-y: auto;
+      display: block;
+      height: 100%;
+      background: #fff;
+      z-index: 1010;
+      border: 1px solid #ccc;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      #serpBox,
+      .poibox .poi-info,
+      .poibox .poi-name,
+      .poibox .poi-title,
+      .serp-box-con {
+        overflow: hidden;
+      }
+      .serp-box-con {
+        width: 100%;
+        position: relative;
+        height: auto;
+        display: inline-block;
+
+        ul, p {
+          margin: 0;
+          padding: 0;
+        }
+        #serp {
+          position: relative;
+          padding: 0 15px;
+          margin-top: 10px;
+          max-height: 500px;
+          .serp-head {
+            position: relative;
+            line-height: 36px;
+            .serp-return, .serp-title {
+              font-size: 14px;
+              padding: 8px 12px;
+              position: relative;
+              &:hover {
+                color: #0f89f5;
+                cursor: pointer;
+              }
+            }
+            .serp-return {
+              display: inline-block;
+            }
+            .serp-current {
+              display: inline-block;
+            }
+            .serp-panel-close {
+              position: absolute;
+              right: 0;
+              top: 0;
+              cursor: pointer;
+            }
+          }
+          .poibox {
+            position: relative;
+            border-top: 1px solid #eaeaea;
+            padding: 10px 0;
+            cursor: pointer;
+            &.poibox-mouseover {
+              background: #f2fbff;
+            }
+            &.poibox-selected {
+              background: #f2fbff !important;
+            }
+            .poi-info-left {
+              max-width: 320px;
+              padding-left: 8px;
+            }
+            .poi-name {
+              float: left;
+              max-width: 200px;
+              height: 22px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-top: 1px;
+            }
+            .poi-info {
+              margin: 4px 0;
+              p {
+                color: #999;
+                max-height: 78px;
+                max-width: 285px;
+                &.poi-deepinfo {
+                  line-height: 20px;
+                  font-family: Tahoma;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+          .serp-paging {
+            margin: 0 0 0 10px;;
+            .paging-current {
+              border: none;
+            }
+            span {
+              display: inline-block;
+              padding: 2px 6px;
+              color: #b2b3b4;
+              border: 1px solid #ededed;
+              text-align: center;
+              float: right;
+              z-index: 1;
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .map-marker {
+    text-align: center;
+    z-index: 100;
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/map/marker-blue.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: contain;
+    line-height: 2.2;
+    color: #FFF;
+    &.marker-mouseover {
+      background-image: url(../images/map/marker-red.png) !important;
+    }
+    &.marker-selected {
+      color: transparent;
+      background-position: 2px 0;
+      background-image: url(../images/map/marker.png) !important;
+    }
+  }
+}

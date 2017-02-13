@@ -1,0 +1,26 @@
+
+[class^="btn-checked-"], [class*=" btn-checked-"] {
+    border: 0px;
+    margin-right: @content-gutter-width * 0.5;
+    background-color: @btn-checked-bg;
+}
+
+// btn 类 扩展
+.btn-checked-primary {
+    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-primary, darken( @brand-primary, 5%));
+}
+.btn-checked-success {
+    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-success, darken( @brand-success, 5%));
+}
+.btn-checked-danger {
+    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-danger, darken( @brand-danger, 5%));
+}
+.btn-checked-warning {
+    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-warning, darken( @brand-warning, 5%));
+}
+.btn-checked-info {
+    .btn-checked-variant(@btn-default-color, @btn-default-bg, @btn-default-border, #fff, @brand-info, darken( @brand-info, 5%));
+}
+// &[disabled] {
+//     .button-variant(@gray-light, @gray-lighter, darken(@gray-lighter , 10%));
+// }

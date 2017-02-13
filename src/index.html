@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="description" content="Node + RequireJS/AMD + Angular + Bootstrap">
+    <title>Gulp + RequireJS/AMD + Angular + Bootstrap</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="bookmark" href="./images/favicon.ico">
+    <link rel="apple-touch-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" ng-href="./css/{{theme||'default'}}.theme.css">
+    <link rel="stylesheet" type="text/css" href="./libs/pnotify/dist/pnotify.css">
+</head>
+
+<body>
+    <div class="wrapper" ng-controller="MainController" ng-class="{'sidebar-folded':UI.sidebarFolded,'navbar-folded':UI.navbarFolded}">
+        <div class="header">
+            <a class="logo" href="http://jxbapp.cn" target="_blank"><i class="icon-bang-logo"></i></a>
+            <ul class="header-navbar">
+                <li class="school" ng-click="UI.showSchoolMenu=!UI.showSchoolMenu">
+                    <span>Angular Application</span>
+                </li>
+            </ul>
+            <ul class="header-navbar header-navbar-right right">
+                <li class="dropdown">
+                    <a type="button" data-toggle="dropdown"><i class="icon-user"></i> {{$root.user.name}} <i class="caret"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a ng-click="changePassword()">修改密码</a></li>
+                        <li><a ng-click="signout()">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navigate">
+            <div class="nav-sidebar">
+                <b class="sidebar-switch" ng-click="UI.sidebarFolded=!UI.sidebarFolded"><i class="icon-align-justify"></i></b>
+                <ul>
+                    <li ng-repeat="item in $root.navs.main" ng-class="{'active':UI.targetSidebar === item}" ng-click="changeSidebar(item)">
+                        <b><i ng-class="item.icon"></i></b><span ng-bind="item.text"></span>
+                    </li>
+                </ul>
+            </div>
+            <nav class="nav-navbar">
+                <div>
+                    <div class="title" ng-bind="UI.targetSidebar.text"></div>
+                    <ul>
+                        <li ng-repeat="item in UI.targetSidebar.items" ui-sref-active="active">
+                            <b ui-sref="{{item.name}}">{{item.text}}<span ng-if="item.badge" class="tally" bind-from="item.badge"></span></b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub" ui-sref-active="active">
+                    <div class="title back" ng-click="state.back(UI.targetNavbar.name)"><i class="icon-arrow-left"></i></div>
+                    <ul>
+                        <li ng-repeat="item in UI.targetNavbar.items" ng-class="{'active':state.includes(item.name)}">
+                            <b ui-sref="{{item.name}}" ng-bind="item.text"></b>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <b class="sidebar-toggle" ng-class="{'inside':UI.navbarFolded}" ng-click="UI.navbarFolded=!UI.navbarFolded" ng-show="UI.navbarToggleVisible">
+                <i class="glyphicon glyphicon-eject"></i>
+            </b>
+        </div>
+        <div class="frame-group">
+            <div class="fragment" ng-show="state.active('@')" ui-view></div>
+            <div class="fragment" ng-show="state.active('sub@')" ui-view="sub"></div>
+        </div>
+    </div>
+    <script src="./libs/requirejs/require.js" data-main="./js/index.js"></script>
+</body>
+
+</html>

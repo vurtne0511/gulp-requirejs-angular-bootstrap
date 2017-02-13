@@ -1,0 +1,29 @@
+{
+  "name": "saas-operation",
+  "description": "jiaxiaobang",
+  "main": "app.js",
+  "authors": [
+    "jxbapp.com"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "jxbapp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.4.2",
+    "angular-bootstrap": "2.2.0",
+    "bootstrap": "3.3.7",
+    "pnotify": "3.0.0",
+    "awesome-bootstrap-checkbox": "0.3.7",
+    "requirejs": "^2.3.2",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+
+.alert-sm {
+    padding: @alert-padding-sm @alert-padding;
+    margin-bottom: @line-height-computed-sm;
+    &.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+    &.alert-dismissible {
+        padding-right: (@alert-padding + 20);
+        // Adjust close link position
+        .close {
+            top: 0px;
+        }
+    }
+}
+
+.form-static {
+    .alert:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.alert-default {
+    .alert-variant(@alert-default-bg; @alert-default-border; @alert-default-text);
+}

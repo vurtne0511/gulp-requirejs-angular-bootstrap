@@ -1,0 +1,115 @@
+table.table, .grid table {
+    width: 100%;
+    border: 1px solid @table-inner-border;
+    tr {
+        &:nth-child(1n+2) {
+            width: 100%;
+            border: 1px solid @table-inner-border;
+        }
+    }
+    th {
+        // position: relative;
+        padding: @table-heading-padding;
+        background-color: @table-heading-bg;
+        font-weight: normal;
+        color: @table-header-color;
+        vertical-align: middle;
+        text-align: left;
+        user-select: none;
+        -webkit-user-select: none;
+        white-space: nowrap;
+        .caret {
+            margin: -2px 0 0 6px;
+        }
+    }
+    td {
+        // position: relative;
+        padding: @table-heading-padding;
+        // line-height: 14px;
+        .progress-span {
+            .flex-row;
+            background-color: transparent;
+            box-shadow: none;
+            max-width: 80%;
+            >div {
+                .flex(1);
+                margin-right: 6px;
+                margin-top: 7px;
+                padding: 0;
+                height: 3px;
+                background-color: #DDD;
+                vertical-align: middle;
+                overflow: hidden;
+                hr {
+                    margin: 0;
+                    border: none;
+                    height: 3px;
+                    background-color: #47A742;
+                }
+            }
+            span {
+                .flex(0);
+                -webkit-transform: scale(0.75);
+                transform: scale(0.75);
+                color: #777;
+            }
+        }
+        &.gray {
+            color: #BBB;
+        }
+        &.green {
+            .text-success;
+        }
+        &.red {
+            .text-danger;
+        }
+        &.orange {
+            .text-warning;
+        }
+    }
+    th, td {
+        span.ellipsis-span {
+            position: relative;
+            display: inline-block;
+            line-height: 18px;
+        }
+        img {
+            max-height: 60px;
+        }
+        &.sm {
+            max-width: 100px;
+        }
+        &.md {
+            max-width: 200px;
+        }
+        &.lg {
+            max-width: 300px;
+        }
+    }
+    .center {
+        .text-center;
+    }
+    .right {
+        .text-right;
+    }
+    .nowrap {
+        white-space: nowrap;
+        /*overflow: hidden;*/
+        /*text-overflow: ellipsis;*/
+    }
+    .pre {
+        white-space: pre;
+    }
+}
+
+table .checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table tr {
+    &.selected th, &.selected td {
+        background-color: lighten(@brand-primary, 5%);
+        color: white !important;
+    }
+}

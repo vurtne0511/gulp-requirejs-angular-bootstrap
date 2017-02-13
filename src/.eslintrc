@@ -1,0 +1,59 @@
+{
+  // 环境：Node.js , browser
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "node": true
+  },
+
+  // 全局变量
+  "globals": {
+    "_": true,
+    "async": true,
+    "angular": true,
+    "define": true,
+    "moment": true,
+    "AMap": true,
+    "require": true,
+    "PNotify": true
+  },
+
+  // 规范
+  "rules": {
+
+    // 严格模式
+    "strict": [ 2, "global" ],
+
+    // 使用制表符缩进
+    //"indent": [ "error", 2, { "SwitchCase": 1 } ],
+    // 必须使用花括号
+    "curly": 2,
+    // 必须以分号结尾
+    "semi": 2,
+    // 字符串使用单引号
+    "quotes": 0,
+    // 使用严格等于
+    "eqeqeq": 2,
+    // 键值之间的冒号后应有空格
+    "key-spacing": [ 2, { "beforeColon": false, "afterColon": true } ],
+
+    // 允许下划线开始的变量名
+    "no-underscore-dangle": [ 2, { "allow": [ "_id" ] } ],
+    // 允许子代码块重复使用变量名
+    "no-shadow": 0,
+    // 允许使用短路表达式及三元表达式
+    "no-unused-expressions": [ 2, { "allowShortCircuit": true, "allowTernary": true } ],
+
+    // 除指定函数外当函数名第一个字母为大写时（即为构造函数时）必须通过 new 关键字构造
+    "new-cap": [ 2, { "capIsNewExceptions": [ "RESTful" ] } ],
+
+    // 变量必须声明
+    "no-undef": 2,
+    // 不允许出现连续的空格
+    "no-multi-spaces": 2,
+    // 不允许空格与制表符混编
+    "no-mixed-spaces-and-tabs": 2,
+    // 行尾不许有空格
+    "no-trailing-spaces": 2
+  }
+}

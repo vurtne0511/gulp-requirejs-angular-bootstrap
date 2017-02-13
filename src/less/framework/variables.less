@@ -1,0 +1,187 @@
+
+@brand-primary:                 #0199cc;
+
+@link-color:                    #0199cc;
+
+/*@font-family-sans-serif:        'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', '微软雅黑', 'Segoe UI', Tahoma, '宋体b8b体', SimSun, sans-serif;*/
+@font-family-sans-serif:        "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, 'Microsoft Yahei UI', 'Microsoft Yahei', '微软雅黑' ,'宋体b8b体', SimSun, sans-serif;
+
+@font-size-base:                12px;
+
+@icon-font-path:                "/libs/bootstrap/fonts/";
+@icon-font-name:                "glyphicons-halflings-regular";
+@icon-font-svg-id:              "glyphicons_halflingsregular";
+
+@border-radius-base:            0px;
+@border-radius-large:           0px;
+@border-radius-small:           0px;
+
+@base-border-color:             #ddd;
+@base-block-color:              #f5f5f5;
+
+//Transition global options
+@transition-speed:              .3s;
+@transition-fn:                 ease-in-out; //cubic-bezier(0.32,1.25,0.375,1.15);
+
+@grid-gutter-width:             20px;
+// @btn-default-color:              #333;
+// @btn-default-bg:                 #f1f1f1;
+// @btn-default-border:             #bbb;
+
+@btn-checked-bg:                #ddd;
+
+// content 内容之间的距离
+@content-padding-width:         @grid-gutter-width/2 @grid-gutter-width * 1.25 @grid-gutter-width * 1.25;
+@content-gutter-width:          @grid-gutter-width * 0.5;
+
+@content-block-bg:              @base-block-color;
+@content-border-color:          @base-border-color;
+
+// 进度条相关变量
+@progress-bar-size-base:        20px;
+@progress-bar-size-xl:          ceil((@progress-bar-size-base * 2));
+@progress-bar-size-lg:          ceil((@progress-bar-size-base * 1.5));
+@progress-bar-size-md:          @progress-bar-size-base;
+@progress-bar-size-sm:          ceil((@progress-bar-size-base * 0.5));
+@progress-bar-size-xs:          ceil((@progress-bar-size-base * 0.25));
+@progress-bar-size-2xs:         ceil((@progress-bar-size-base * 0.13));
+
+@progress-bar-border-radius:    1px;
+@progress-bar-sm-border-radius: 1px;
+@progress-bar-xs-border-radius: 1px;
+
+// 表单输入框相关变量
+@input-width-base:              170px;
+@input-width-xl:                ceil(@input-width-base * 2);
+@input-width-lg:                ceil(@input-width-base * 1.5);
+@input-width-md:                @input-width-base;
+@input-width-sm:                ceil(@input-width-base * 0.5);
+@input-width-xs:                ceil(@input-width-base * 0.3);
+
+// 重写 checkbox 参数
+@font-family-icon: 'jxb-icon';
+@fa-var-check: "\e907";
+@check-icon: @fa-var-check;
+
+
+@alert-padding-sm:              ceil(@alert-padding * 0.7);
+@line-height-computed-sm:       ceil(@line-height-computed * 0.7);
+
+@alert-default-bg:              @content-block-bg;
+@alert-default-border:          @content-border-color;
+@alert-default-text:            @gray;
+
+@table-heading-bg:              @base-block-color;
+@table-heading-padding:         10px 15px;
+@table-inner-border:            @base-border-color;
+@table-border-color:            #ccc;
+@table-text-color:              @gray-dark;
+@table-header-color:            @gray-light;
+@table-condensed-cell-padding:  4px 5px;
+
+
+@pagination-color:              @gray;   
+@pagination-bg:                 #F5F5F5;
+@pagination-border:             #E1E6EB;
+
+@pagination-hover-color:        darken(@pagination-color,5%);
+@pagination-hover-bg:           darken(@pagination-bg,5%);
+@pagination-hover-border:       @pagination-border;
+
+@pagination-active-color:       #fff;
+@pagination-active-bg:          @brand-primary;
+@pagination-active-border:      @brand-primary;
+
+@photo-border-color:            @base-border-color;
+@photo-border-radius-base:      5px;
+@photo-gutter-width-base:       10px;
+
+@photo-size:                    100px;
+@photo-size-sm:                 ceil(@photo-size * 0.7);
+@photo-size-lg:                 ceil(@photo-size * 1.3);
+
+@photo-font-size:               14px;
+@photo-font-size-sm:            12px;
+@photo-font-size-lg:            16px;
+
+@photo-border-radius:           @photo-border-radius-base;
+@photo-border-radius-sm:        ceil(@photo-border-radius-base * 0.5);
+@photo-border-radius-lg:        ceil(@photo-border-radius-base * 0.5);
+
+@photo-gutter-width:            @photo-gutter-width-base;
+@photo-gutter-width-sm:         ceil(@photo-gutter-width-base * 0.5);
+@photo-gutter-width-lg:         ceil(@photo-gutter-width-base * 1.5);
+
+
+
+// header
+@header-navbar-height:          50px;
+@header-navbar-bg:              @brand-primary;
+@header-navbar-text-color:      #fff;
+
+// 运营图标
+@header-member-level-bg:        #C5C4C4;
+@header-member-level-vip-bg:    #E87220;
+@header-message-title:          #E7EAEF;
+@unread-dot-color:              @brand-primary;
+
+@sidebar-sub-bg:                #fff;
+@sidebar-sub-text:              #fff;
+@sidebar-sub-title-bg:          #fff;
+
+
+// 侧边栏
+
+@sidebar-style:                 'dark';
+@sidebar-dark-bg:               #293038;
+@sidebar-dark-text:             #AEB9C2;
+@sidebar-dark-active-text:      #FFF;
+
+@sidebar-light-bg:              #E5E5E5;
+@sidebar-light-text:            @brand-primary;
+@sidebar-light-active-text:     #FFF;
+
+@sidebar-bg:                    #293038;
+@sidebar-active-bg:             @brand-primary;
+@sidebar-text:                  #AEB9C2;
+@sidebar-active-text:           #FFF;
+
+
+/*.sidebar-style('dark');*/
+
+// 侧边栏
+@sidebar-width:                 50px;
+@sidebar-open-width:            100px;
+
+// 导航栏宽度
+@navbar-width:                  140px;
+
+@nav-sidebar-base:              180px;
+@nav-sidebar-width:             50px;
+
+@sidebar-toggle-bg:             #394555;
+@sidebar-group-bg:              #22282E;
+@sidebar-tip-bg:                #37424F;
+
+@control-sidebar-width:         230px;
+
+@control-sidebar-text:          @gray-dark;
+@control-sidebar-bg:            #EFEFEF;
+
+@control-sidebar-tab-bg:        #293038;
+@control-sidebar-tab-active-bg: @control-sidebar-bg;
+@control-sidebar-tab-text:      #FFF;
+
+// 导航栏
+@navbar-bg:                     #EAEDF1;
+@nav-toggle-fore-color:         #546478;
+@nav-toggle-bg:                 #F7F7F7;
+@nav-content-toggle-bg:         #D9DEE4; // 放置在内容区域时的背景色
+@nav-title-bg:                  #D9DEE4;
+@nav-back-fore-color:           #546478;
+@nav-hover-bg:                  #F4F6F8;
+@nav-active-bg:                 #FFFFFF;
+
+// title-tab
+@title-tab-bg:                  #D4D9E0;
+@title-tab-selected-bg:         #49596D;
