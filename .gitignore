@@ -1,0 +1,54 @@
+# Windows 文件夹配置文件
+desktop.ini
+
+# Mac OS X 文件夹配置文件
+.DS_Store
+
+# SVN 数据路径
+/.svn/
+
+# WebStorm 工程配置路径
+/.idea/
+
+# 进程 ID 文件
+pid
+
+# NPM 模块路径
+/node_modules/*/
+!/node_modules/saas-utils
+
+# 文件资源路径
+/resources/files/*/
+!/resources/files/readme.txt
+
+# 临时文件
+/private/.temporary/*/
+!/private/.temporary/readme.txt
+
+# 上传文件缓存
+/private/.upload/*/
+!/private/.upload/readme.txt
+
+# 日志文件
+/private/log/*.log
+
+# 静态化文件路径
+/public/files/*/
+
+# visual studio code 配置文件
+/.vscode/
+
+# eclipse 工程信息文件
+.project
+
+# NPM 调试日志
+npm-debug.log
+
+# 编译输出目录
+/dist/
+/src/libs/*
+/src/css/
+/src/js/bundle/
+!/src/libs/browserdetect/
+!/src/libs/clockpicker/
+!/src/libs/jxb-iconfont/
