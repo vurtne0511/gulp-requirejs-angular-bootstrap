@@ -15,25 +15,6 @@ pid
 
 # NPM 模块路径
 /node_modules/*/
-!/node_modules/saas-utils
-
-# 文件资源路径
-/resources/files/*/
-!/resources/files/readme.txt
-
-# 临时文件
-/private/.temporary/*/
-!/private/.temporary/readme.txt
-
-# 上传文件缓存
-/private/.upload/*/
-!/private/.upload/readme.txt
-
-# 日志文件
-/private/log/*.log
-
-# 静态化文件路径
-/public/files/*/
 
 # visual studio code 配置文件
 /.vscode/
@@ -44,7 +25,7 @@ pid
 # NPM 调试日志
 npm-debug.log
 
-# 编译输出目录
+# 静态化文件路径
 /bower_components/
 /dist/
 /src/libs/*
